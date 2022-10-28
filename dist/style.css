@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(204deg, 43%, 93%);
+  font-family: "Karla", Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  background-color: white;
+  border-radius: 1rem;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "a  a" "b c";
+  margin: 2rem 1rem;
+}
+
+.header {
+  grid-area: a;
+  padding: 2rem;
+  padding-bottom: 2.5rem;
+}
+.header .join {
+  color: hsl(179deg, 62%, 43%);
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+.header .subtitle {
+  color: hsl(71deg, 73%, 54%);
+  margin-bottom: 1rem;
+}
+.header .description {
+  color: hsl(218deg, 22%, 67%);
+  margin-right: 4rem;
+}
+
+.title-content {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.box {
+  padding: 3rem;
+}
+
+.subscription-box {
+  grid-area: b;
+  background-color: hsl(179deg, 62%, 45%);
+}
+.subscription-box p {
+  color: white;
+}
+.subscription-box a {
+  padding: 12px 0;
+  display: block;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: hsl(71deg, 73%, 54%);
+  box-shadow: 15px 15px 10px hsl(179deg, 62%, 42%);
+  margin-top: 2rem;
+}
+
+.price-sub {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+span.price {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+span.per-month {
+  margin-left: 1rem;
+  color: hsl(179deg, 62%, 77%);
+  font-weight: 400;
+}
+
+.why-us {
+  grid-area: c;
+  background-color: hsl(179deg, 62%, 58%);
+}
+.why-us .list {
+  list-style: none;
+}
+.why-us .list li {
+  color: white;
+  font-weight: 400;
+  font-size: 0.9rem;
+  padding-bottom: 4px;
+}
+
+@media (max-width: 425px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas: "a" "b" "c";
+  }
+}
